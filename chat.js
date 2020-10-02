@@ -92,13 +92,6 @@ io.on('connection', function (socket) {
     users[socket.handshake.query.admin_id] = new Array();
     users[socket.handshake.query.admin_id][0] = socket;
   }
-  // console.log('=-=-=-=-000');
-  // console.log(users[socket.handshake.query.admin_id]);
-  // console.log('12121212121212121212');
-  // console.log(user_tabs[socket.handshake.query.admin_id]);
-  // console.log(users);
-  // console.log(user_tabs);
-  // console.log('=-=-111');
 
   // admin_id is defined so then login status update here
   if (socket.handshake.query.admin_id != undefined) {
@@ -214,78 +207,6 @@ io.on('connection', function (socket) {
         }
       })
     });
-
-    // socket.on('click_id', function(click_id){
-    //   var admin_id = socket.handshake.query.admin_id;
-    //   // console.log(click_id);
-    //   // console.log(chat_data_limit);
-    //   var start = 0;
-    //   var end = 10;
-    //   // socket.handshake.session.click_id = click_id;
-    //   // socket.handshake.session.save();
-    //   var response = new Array();
-    //   var condition = "(`from_id`="+admin_id+" and `to_id`="+click_id+" or `to_id`="+admin_id+" and `from_id`="+click_id+")";
-    //   // var sql = "select * from `chat` where "+condition+ "  ORDER BY `chat_id` DESC LIMIT "+start+","+end;
-    //   var sql = "select * from ( select * from `chat` where "+condition+ " ORDER BY `chat_id` desc LIMIT "+start+","+end+") sub ORDER BY `chat_id` ASC";
-    //   console.log(sql);
-    //   mysqlConnction.query(sql, (error, msg_rows)=>{
-    //     if(msg_rows){
-    //       var login_status = "select * from `register_user` where `user_id`="+click_id;
-    //       // console.log(login_status);
-    //       mysqlConnction.query(login_status, (error, res_rows)=>{
-    //         if(res_rows){
-    //           response.push({'click_log_status':res_rows, 'each_msg':msg_rows, 'limit':end});
-    //           socket.emit('click_id_res', response);
-    //           // console.log('not empty');
-    //         }
-    //       });
-    //     } else {
-    //       var login_status = "select * from `register_user` where `user_id`="+click_id+" or `user_id`="+admin_id;
-    //       mysqlConnction.query(login_status, (res_rows)=>{
-    //         if(res_rows){
-    //           response.push({'click_log_status':res_rows, 'each_msg':msg_rows, 'limit':start});
-    //           socket.emit('click_id_res', response);
-    //           // console.log('empty');
-    //         }
-    //       });
-    //     }
-    //   })
-    //   // io.to(socket.handshake.query.admin_id).emit('click_id_res', res);
-    // });
-
-    // socket.on('click_id', function(click_id){
-    //   var admin_id = socket.handshake.query.admin_id;
-    //   // console.log(click_id);
-    //   // socket.handshake.session.click_id = click_id;
-    //   // socket.handshake.session.save();
-    //   var response = new Array();
-    //   var condition = "(`from_id`="+admin_id+" and `to_id`="+click_id+" or `to_id`="+admin_id+" and `from_id`="+click_id+")";
-    //   var sql = "select * from `chat` where "+condition;
-    //   console.log(sql);
-    //   mysqlConnction.query(sql, (error, msg_rows)=>{
-    //     if(msg_rows){
-    //       var login_status = "select * from `register_user` where `user_id`="+click_id;
-    //       // console.log(login_status);
-    //       mysqlConnction.query(login_status, (error, res_rows)=>{
-    //         if(res_rows){
-    //           response.push({'click_log_status':res_rows, 'each_msg':msg_rows});
-    //           socket.emit('click_id_res', response);
-    //           // console.log('not empty');
-    //         }
-    //       });
-    //     } else {
-    //       var login_status = "select * from `register_user` where `user_id`="+click_id+" or `user_id`="+admin_id;
-    //       mysqlConnction.query(login_status, (res_rows)=>{
-    //         if(res_rows){
-    //           response.push({'click_log_status':res_rows, 'each_msg':msg_rows});
-    //           socket.emit('click_id_res', response);
-    //           // console.log('empty');
-    //         }
-    //       });
-    //     }
-    //   })
-    //   // io.to(socket.handshake.query.admin_id).emit('click_id_res', res);
-    // });
 
     socket.on('chat_data', function (data) {
       var admin_id = socket.handshake.query.admin_id;
@@ -472,14 +393,6 @@ io.on('connection', function (socket) {
     var s = new Date().getSeconds();
     var c_date = year + '-' + month + '-' + date + ' ' + h + ':' + m + ':' + s;
     mysqlConnction.query(" update `register_user` set `user_status`=0, `status_active_time`=" + "'" + c_date + "'" + " where `user_id`=" + socket.handshake.query.admin_id);
-
-    // var all_user = "select * from `register_user` where `user_id`!="+"'"+socket.handshake.query.admin_id+"'";
-    // mysqlConnction.query(all_user, (error, rows)=>{
-    //   login = new Array();
-    //   login.push({'id':socket.handshake.query.admin_id, 'msg':"logout", 'user_detail':rows});
-    //   io.to(socket.handshake.query.admin_id).emit('admin_online', login);
-    //   console.log(login);
-    // });
   }
   // end of disconnect
 });
@@ -526,9 +439,7 @@ app.get('/', function (req, res) {
 
 
 app.post('/', function (req, res) {
-  // session_data = req.session;
-  // console.log(req.session);
-  // console.log('register form data get');
+
   if (req.method == 'POST') {
     console.log('data submit at post method');
     var UserName = req.body.username;
@@ -536,10 +447,6 @@ app.post('/', function (req, res) {
     var PassWord = md5(req.body.password);
     var R_PassWord = md5(req.body.r_password);
     var file = req.files.user_photo;
-    // console.log(req.files.user_photo);
-    // console.log(Email);
-    // console.log(PassWord);
-    // console.log(R_PassWord);
     var image_name = path.basename(file.name, path.extname(file.name)) + "_" + UserName + "_" + Math.random() + path.extname(file.name);
     if (PassWord == R_PassWord) {
       var sql = "select * from register_user where `user_email` = " + "'" + Email + "'";
@@ -621,13 +528,9 @@ app.post('/verify_login', (req, res) => {
 
 // after seccessfully login.
 app.get('/dashboard', (req, res) => {
-  // console.log((req.session.user));
-  // console.log(res);
-  // console.log(req.session);
-  // console.log(req.session.password);
+
   var login_data = req.session.user;
   if (login_data != undefined) {
-
     // here update user login status
     login_data.forEach(function (update_id) {
       var sql = "update `register_user` set `user_status` = 1 where `user_id`=" + update_id.user_id;
@@ -671,15 +574,6 @@ app.get('/logout', (req, res) => {
 
 // change_profile here
 
-// app.get('/change_profile_view/:id', function(req, res){
-//   console.log(req.params.id);
-//   var login_data = req.session.user;
-//   if(login_data != undefined){
-//     res.render('chat/user_profile.ejs', {user_session : login_data});
-//   } else {
-//     res.redirect('/');
-//   };
-// });
 app.get('/change_profile_view', (req, res) => {
 
   var login_data = req.session.user;
@@ -758,9 +652,6 @@ app.post('/change_profile_update', (req, res) => {
           console.log('file extension is not valide');
         }
       }
-      // console.log('12312');
-      // console.log(req.body);
-      // console.log(req.files.new_photo);
     }
   } else {
     res.redirect('/');
@@ -779,8 +670,6 @@ app.get('/change_password_view', function (req, res) {
   }
 });
 app.post('/change_password_update', function (req, res) {
-  // console.log(res);
-  //   console.log(req.body.o_password);
   var login_data = req.session.user;
   if (login_data != undefined) {
     if (req.method == 'POST') {
