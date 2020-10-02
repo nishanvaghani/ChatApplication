@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from mannatthemes.com/annex/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:19:18 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Chat log_in page</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Mannatthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div class="accountbg"></div>
+<div class="wrapper-page">
+
+    <div class="card">
+        <div class="card-body">
+
+            <h3 class="text-center mt-0 m-b-15">
+                <a href="javascript:void(0);" class="logo logo-admin">LogIn</a>
+            </h3>
+
+            <div class="p-3">
+                <span style="color:red;" class="error"><% if(error_msg) { %> <%= error_msg; %> <% } %></span>
+                <form class="form-horizontal m-t-20" action="http://localhost:2005/verify_login" method="post" >
+                    <label class="control-label col-sm-12" for="name" style="padding: 0px">Username:</label>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" id="name" name='username' type="text" required="" placeholder="Username">
+                        </div>
+                    </div>
+                    <label class="control-label col-sm-12" for="name" style="padding: 0px">Password:</label>
+                    <span class=" mdi mdi-eye show_pass" style="cursor: pointer"> Show Password</span>
+                    <span class=" mdi mdi-eye-off hide_pass" style="cursor: pointer; display: none"> Hide Password</span>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" type="password" id="pass" name="password" required="" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center row m-t-20">
+                        <div class="col-12">
+                            <button class="btn btn-success btn-block waves-effect waves-light" id="login_id" type="submit">Log In</button>
+                        </div>
+                    </div>
+                    <div class="form-group text-center row m-t-20">
+                        <div class="col-12">
+                            <a href="http://localhost:2005/register" class="btn btn-danger btn-block waves-effect waves-light">Register</a>
+                        </div>
+                    </div>
+
+                    <!--                    <div class="form-group m-t-10 mb-0 row">-->
+                    <!--                        <div class="col-sm-7 m-t-20">-->
+                    <!--                            <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> <small>Forgot your password ?</small></a>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="col-sm-5 m-t-20">-->
+                    <!--                            <a href="pages-register.html" class="text-muted"><i class="mdi mdi-account-circle"></i> <small>Create an account ?</small></a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery  -->
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> -->
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+
+<script type="text/javascript">
+// var socket = io.connect('http://localhost:2005/');
+//   $('#login_id').click(function(){
+//     console.log('click successfully');
+//     var username = $('#name').val();
+//     var password = $('#pass').val();
+//     console.log(username+" "+password);
+//     if(username == '' && password == ''){
+//       // filed are empty here, so no any action here.
+//     } else {
+//       var login_data = new Array();
+//       login_data.push({'username':username, 'password':password});
+//       socket.emit('form_data', login_data);
+//       $('#name, #pass').val('');
+//
+//       socket.on('reply', function(msg){
+//         console.log(msg);
+//         if(msg == true){
+//
+//         } else {
+//           $('.error').html('');
+//           $('.error').show();
+//           $('.error').append('Password and username invalid');
+//         }
+//       });
+//     }
+//   });
+</script>
+<script>
+
+    setTimeout(function(){
+        $('.error').hide();
+    },3000);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.show_pass').click(function () {
+            $('#pass').attr('type','text');
+            $('.hide_pass').attr('style','display:block;cursor:pointer');
+            $('.show_pass').attr('style','display:none;cursor:pointer');
+        });
+        $('.hide_pass').click(function () {
+            $('#pass').attr('type','password');
+            $('.show_pass').attr('style','display:block;cursor:pointer');
+            $('.hide_pass').attr('style','display:none;cursor:pointer');
+        });
+    });
+</script>
+<!-- Mirrored from mannatthemes.com/annex/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:19:19 GMT -->
+</html>

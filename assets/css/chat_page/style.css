@@ -1,0 +1,1295 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  background-color:#e6e6e8;
+  line-height:24px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+div,
+section,
+textarea,
+input,
+summary {
+  display: block;
+  box-sizing:border-box;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  text-decoration:none;
+  box-sizing:border-box;
+  transition:ease 0.2s;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+ul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	}
+
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {font-size: 32px; font-weight:400; margin:0px;}
+h2, h3, h4, h5, h6{margin:0px;}
+mark {color: #000;background: #ff0;}
+small {font-size: 80%;}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {top: -.5em;}
+sub {bottom: -.25em;}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {margin: 1em 40px;}
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+pre {overflow: auto;}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  box-sizing:border-box;
+  box-shadow:none;
+}
+input:focus,input:active,
+select:focus,select:active,
+textarea:focus, textarea:active {
+  box-shadow:none !important;
+  outline:none !important;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+
+img{max-width:100%;}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+legend {
+  padding: 0;
+  border: 0;
+}
+textarea {overflow: auto;}
+optgroup {font-weight: bold;}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td, th {
+  padding: 0;
+}
+p{
+	margin-top:0px;
+	}
+p:last-child{
+	margin-bottom:0px;
+	}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.BgWhite{
+	background-color:#ffffff;
+	}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+/** Main Header **/
+
+.MainHeader{
+	padding:10px 25px;
+	background-color:#f2b632;
+	position:fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	width:100%;
+	z-index:115;
+	}
+.MainHeader:after, .MainHeader:before{
+	content:" ";
+	display:table;
+	clear:both;
+	}
+.MainHeader .LogoBox{float:left;}
+.MainHeader .LogoBox a{
+	color:#ffffff;
+	font-size:24px;
+	}
+.MainHeader .NotificationBox{
+	float:right;
+	}
+.BodyContainer{
+	margin-top:48px;
+	position:relative;
+	z-index:11;
+	
+	height:100%;
+	}
+.RespBarIcon{
+	display:none;
+	}
+	
+.HeadProfile{
+	float:right;
+	}
+.HeadProfile img{
+	max-width:25px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+	background-color:#ffffff;
+	border-radius:100%;
+	}
+.HeadProfile span{
+	vertical-align:middle;
+	color:#ffffff;
+	}
+/** Main Sidebar **/
+
+.MainSidebar{
+	width:280px;
+	position:fixed;
+	left:0px;
+	top:48px;
+	bottom:0px;
+	overflow-y:scroll;
+	background-color:#677077;
+	z-index:99;
+	box-sizing:border-box;
+	}
+.NavProfileBox{
+	padding:15px;
+	background-color:rgba(0, 0, 0, 0.25);
+	}
+.ProfilePic{
+	display:table-cell;
+	vertical-align:middle;
+	}
+.ProfilePic a{
+	width:45px;
+	height:45px;
+	border-radius:100%;
+	overflow:hidden;
+	display:block;
+	}
+.ProfilePic img{
+	width:100%;
+	}
+.ProfileInfo{
+	display:table-cell;
+	padding-left:15px;
+	vertical-align:middle;
+	}
+.ProfileInfo h5{
+	color:#f2b632;
+	margin:0px;
+	margin-bottom:3px;
+	font-size:18px;
+	font-weight:400;
+	}
+.ProfileInfo h6{
+	color:#ffffff;
+	margin:0px;
+	font-size:12px;
+	font-weight:400;
+	}
+.NavigationControl{
+	display:table;
+	width:100%;
+	padding:10px 15px;
+}
+
+	/** Navigation Menu **/
+	
+.Navigation li a{
+	padding:12px 15px;
+	padding-left:45px;
+	display:block;
+	color:#ffffff;
+	border-bottom:1px solid rgba(0, 0, 0, 0.25);
+	font-size:14px;
+	line-height:20px;
+	position:relative;
+	transition: ease 0.2s;
+	}
+.Navigation li a i{
+	color:#ffffff;
+	font-size:20px;
+	position:absolute;
+	left:15px;
+	top:50%;
+	transform:translateY(-50%);
+	}
+.Navigation li a .label{
+	left:auto;
+	right:10px;
+	background-color:#f2b632;
+	border-radius:10px;
+	line-height:16px;
+	float:right;
+	padding:0px 8px;
+	font-size:10px;
+	color:#111111;
+	font-style:normal;
+	font-weight:700;
+	}
+.Navigation li a:hover{
+	background-color:#f2b632;
+	}
+.Navigation li a:hover .label{
+	background-color:#ffffff;
+	}
+
+/** Content Wrapper **/
+
+.MainContentWrapper{
+	margin-left:280px;
+	}
+.MainFooter{
+	position:fixed;/*absolute*/
+	bottom:0px;
+	right:0px;
+	left:280px;
+	padding:15px 20px;
+	background-color:#f9f9f9;
+	border-top:1px solid #d2d6de;
+	font-size:14px;
+	z-index:12;
+	}
+.MainFooter, .MainFooter a{color:#111111;}
+.ContentHeader{
+	padding:15px;
+	background-color:rgba(0, 0, 0, 0.05);
+	border-bottom:1px solid #d2d6de;
+	}
+.ContentHeader h1.Title {font-size: 24px;}
+.ContentBox{
+	min-height:150px;
+	padding:20px;
+	position:relative;
+	overflow-y:scroll;
+	}
+	
+/**-------------------------
+		CHAT APPLICATION
+----------------------------**/
+
+.UserList{
+	width:250px;
+	position:absolute;
+	top:20px;
+	left:20px;
+	bottom:20px;
+	background:#ffffff;
+	padding:0px;
+	}
+.UserList li{
+	display:block;
+	width:100%;
+	}
+.UserList li a{
+	display:table;
+	width:100%;
+	padding:12px 20px;
+	background-color:transparent;
+	color:#677077;
+	transition:ease 0.3s;
+	}
+.UserList li a:hover,
+.UserList li a.active{
+	background-color:#f6f6f6;
+	}
+.UserList li span.awatar{
+	display:table-cell;
+	vertical-align:middle;
+	width:40px;
+	}
+.UserList span.awatar img{
+	display:block;
+	border-radius:100%;
+	}
+.UserList li span.info{
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:20px;
+	line-height:20px;
+	}
+.UserList span.info small{
+	color:#0C3;
+	}
+	
+.ChatMessages{
+	
+	display:block;
+	background-color:#ffffff;
+	}
+.BoxTitle{
+	padding:15px 20px;
+	font-size:20px;
+	color:#677077;
+	border-bottom:1px solid #eeeeee;
+	}
+.ChatMessages .Chating{
+	padding:20px 20px;
+	border-bottom:1px solid #eeeeee;
+	display:block;
+	overflow-y:scroll;
+	}
+.Chating .UIList{
+	display:block;
+	width:100%;
+	}
+.ChatCard{
+	display:block;
+	padding:10px 20px;
+	position:relative;
+	}
+.ChatCard .TypeBox textarea{
+	width:calc(100% - 27px);
+	height:40px;
+	border:none;
+	background:#ffffff;
+	font-size:15px;
+	color:#000000;
+	text-align:left;
+	appearance:none;
+	box-shadow:none;
+	padding:10px;
+	}
+.ChatCard .Btn{
+	position:absolute;
+	right:30px;
+	top:50%;
+	transform:translateY(-50%);
+	display:block;
+	}
+.ChatCard .Btn a,
+.ChatCard .Btn button{
+	display:block;
+	height:40px;
+	width:40px;
+	line-height:40px;
+	text-align:center;
+	background-color:#f2b632;
+	color:#ffffff;
+	font-size:18px;
+	-webkit-appearance:none;
+	appearance:none;
+	border:none;
+	border-radius:100%;
+	box-shadow:none;
+	}
+.UIList li {
+    list-style: none;
+    margin-top: 18px;
+}
+.UIList li .ChatImg{
+    display: inline-block;
+    width: 45px;
+    vertical-align: top;
+}
+.UIList li .ChatImg img {
+    width: 45px;
+    border-radius: 100%;
+}
+.UIList li .ChatContent {
+    width: calc(100% - 140px);
+    display: inline-block;
+    padding-left: 15px;
+}
+.UIList li .ChatContent h5 {
+    color: #677077;
+	font-size:16px;
+	margin-bottom:5px;
+	font-weight:normal;
+}
+.UIList li .ChatContent .BoxInfo{
+    display: inline-block;
+    margin-bottom: 2px;
+    position: relative;
+	background-color:#f6f6f6;
+	padding:10px;
+	border-radius:3px;
+	font-size:14px;
+	line-height:20px;
+}
+.UIList li .ChatContent .BoxInfo:after {
+    right: 99%;
+    top: 0;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: #f6f6f6;
+    border-width: 8px;
+    margin-left: -1px;
+    border-right-color: #f6f6f6;
+}
+.UIList li .ChatTime {
+    display: block;
+    text-align: right;
+    width: 80px;
+    margin-left: 28px;
+    font-size: 10px;
+    color: #99abb4;
+}
+.UIList li.Reverse{
+    text-align: right;
+}
+
+.UIList li.Reverse .ChatContent {
+    padding-left: 0px;
+    padding-right: 15px;
+}
+.UIList li.Reverse .ChatTime {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 65px;
+}
+.UIList li.Reverse .BoxInfo{
+	background:#f6f6f6;
+}
+.UIList li.Reverse .BoxInfo:after {
+    left: 99%;
+    right: auto;
+    border-right-color: transparent;
+    border-left-color: #f6f6f6;
+    border-top-color: #f6f6f6;
+}
+
+/**----------------------------------------
+		PROJECT LIST
+-------------------------------------------**/
+.ProjectList{
+	width:25%;
+	float:left;
+	padding:15px;
+	}
+.ProjectList .InnerBox{
+	border-radius:4px;
+	overflow:hidden;
+	border:1px solid #dedede;
+	background:#ffffff;
+	box-shadow:0px 0px 7px rgba(0, 0, 0, 0.08);
+	}
+.ProjectList .ProjectPreImg img{
+	max-width:100%;
+	display:block;
+	}
+.ProjectList .ProjectListInfo{
+	padding:15px 20px 25px;
+	}
+.ProjectListInfo h4{
+	font-size:20px;
+	font-weight:normal;
+	}
+.ProjectListInfo p{
+	font-size:14px;
+	margin:15px 0px;
+	}
+.ProjectListInfo .Btn a{
+	font-size:14px;
+	padding:7px 20px;
+	line-height:24px;
+	background-color:#f2b632;
+	border-radius:3px;
+	display:inline-block;
+	width:auto;
+	color:#ffffff;
+	}
+.ProjectListInfo .Btn a:hover{
+	background-color:#677077;
+	}
+	
+
+/**------------------------------------------------
+		PROJECT DETAIL PAGE / MANAGE PROJECT
+---------------------------------------------------**/
+
+.ContentHeader.RightData h1.Title{
+	display:inline-block;
+	}
+.ContentHeader .ProjectTimeLine{
+	float:right;	
+	}
+.ContentHeader .ProjectTimeLine li{
+	display:inline-block;
+	padding:0px 15px;
+	line-height:16px;
+	font-size:12px;
+	text-align:center;
+	color:#333333;
+	}
+.ContentHeader .ProjectTimeLine p{
+	margin:0px;
+	font-size:10px;
+	color:#677077;
+	}
+.ManageProject .ContentBox .Col1{
+	float:left;
+	width:calc(100% - 470px);
+	margin-right:20px;
+	overflow-y:scroll;
+	}
+.ManageProject .ContentBox .Col2{
+	max-width:450px;
+	float:right;
+	}
+.ManageProject  .ChatMessages{
+	margin-left:0px;
+	width:100%;
+	}
+.ProjectOverview .OverviewBox{
+	padding:20px;
+	}
+.ProjectOverview {
+	margin-bottom:20px;
+}
+
+.ManageProject .UIList li .ChatContent .BoxInfo {
+    font-size: 13px;
+    line-height: 18px;
+}
+.ManageProject .UIList li .ChatContent h5 {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.ProjectMember{
+	width:calc(100% - 320px);
+	float:left;
+	}
+.ProjectMember .MemberList{	
+	padding:15px;
+}
+.ProjectMember span{
+	width:14.2857%;
+	padding:8px;
+	display:block;
+	float:left;
+	box-sizing:border-box;
+	}
+.ProjectMember span a{
+	display:block;
+	border-radius:100%;
+	overflow:hidden;
+	position:relative;
+	background:#f2b632;
+	}
+.ProjectMember span a p{
+	position:absolute;
+	top:50%;
+	left:0px;
+	right:0px;
+	text-align:center;
+	padding:10px;
+	transform:translateY(-50%);
+	color:#ffffff;
+	z-index:2;
+	opacity:0;
+	transition:ease 0.3s;
+	}
+.ProjectMember span img{
+	max-width:100%;
+	width:100%;
+	display:block;
+	z-index:1;
+	transition:ease 0.3s;
+	}
+.ProjectMember span a:hover img{
+	opacity:0.6;
+	transform:scale(1.1);
+	}
+.ProjectMember span a:hover p{
+	opacity:1;
+	}
+	
+.ProjectTask{
+	width:300px;
+	float:left;
+	margin-left:20px;
+	}
+.ProjectTask .TaskList{
+	padding:20px;
+	}
+.TaskList li{
+	padding:8px 5px;
+	border-bottom:1px solid #eeeeee;
+	color:#677077;
+	position:relative;
+	}
+.TaskList li:first-child{
+	padding-top:0px;
+	}
+.TaskList li:last-child{
+	padding-bottom:0px;
+	border:none;
+	}
+.TaskList li p{
+	margin-bottom:0px;
+	line-height:16px;
+	display:block;
+	}
+.TaskList li small{
+	margin-bottom:0px;
+	line-height:16px;
+	display:block;
+	}
+.TaskList li .Checkbox{
+	position:absolute;
+	right:0px;
+	top:50%;
+	transform:translateY(-50%);
+	}
+.UserDataList{
+	padding:20px;
+	}	
+/** CUSTOM FORM CSS **/
+
+.ContentBox .FormWrapper{
+	padding:20px;
+	}
+.ContentBox .FormWrapper:after,
+.ContentBox .FormWrapper:before{
+	display:table;
+	content:" ";
+	clear:both;
+	}
+
+.FormCol{
+	padding:10px;
+	display:block;
+	/*min-height:86px;*/
+	}
+.FormCol label{
+	display:block;
+	}
+.FormWrapper .Col1{
+	width:100%;
+	clear:both;
+	}
+.FormWrapper .Col1:after,
+.FormWrapper .Col1:before{
+	content:" ";
+	clear:both;
+	display:table;
+	}
+.FormWrapper .Col2{
+	width:50%;
+	float:left;
+	}
+.FormWrapper .Co13{
+	width:33.33%;
+	float:left;
+	}
+.FormWrapper .Co14{
+	width:25%;
+	float:left;
+	}
+.FormWrapper .Co15{
+	width:20%;
+	float:left;
+	}
+
+.FormCol input[type="text"],
+.FormCol input[type="email"],
+.FormCol input[type="date"],
+.FormCol input[type="tel"],
+.FormCol input[type="password"],
+.FormCol input[type="number"],
+.FormCol input[type="time"],
+.FormCol input[type="datetime-local"],
+.FormCol input[type="week"],
+.FormCol input[type="month"],
+.FormCol input[type="file"],
+.FormCol input[type="url"],
+.FormCol input[type="search"],
+.FormCol textarea{
+	padding:8px 12px;
+	display:block;
+	width:100%;
+	font-size:14px;
+	line-height:24px;
+	border:1px solid #d2d6de;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	box-sizing:border-box;
+	}
+.FormCol input[type="date"],
+.FormCol input[type="time"],
+.FormCol input[type="datetime-local"],
+.FormCol input[type="week"],
+.FormCol input[type="month"]{
+	height:42px;
+	}
+
+.FormCol select{
+	padding:8px 12px;
+	display:block;
+	width:100%;
+	font-size:14px;
+	line-height:24px;
+	border:1px solid #d2d6de;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	box-sizing:border-box;
+	background:url(../images/select-icon.png) no-repeat right 15px center;
+	}
+.Table{
+	display:table;
+	}
+.Button1 a,
+.Button1 input[type="submit"],
+.Button1 button{
+	background:#2a2c43;
+	border-radius:3px;
+	display:inline-block;
+	width:auto;
+	padding:9px 40px;
+	line-height:26px;
+	border:none;
+	color:#ffffff;
+	font-size:14px;
+	}
+.Button1 a:hover,
+.Button1 input[type="submit"]:hover,
+.Button1 button:hover{
+	background:#677077;
+	}
+.Button2 a,
+.Button2 input[type="submit"],
+.Button2 button{
+	background:#677077;
+	border-radius:3px;
+	display:inline-block;
+	width:auto;
+	padding:9px 40px;
+	line-height:26px;
+	border:none;
+	color:#ffffff;
+	font-size:14px;
+	}
+.Button2 a:hover,
+.Button2 input[type="submit"]:hover,
+.Button2 button:hover{
+	background:#f2b632;
+	}
+.Button3 a,
+.Button3 input[type="submit"],
+.Button3 button{
+	background:#f2b632;
+	border-radius:3px;
+	display:inline-block;
+	width:auto;
+	padding:9px 40px;
+	line-height:26px;
+	border:none;
+	color:#ffffff;
+	font-size:14px;
+	}
+.Button3 a:hover,
+.Button3 input[type="submit"]:hover,
+.Button3 button:hover{
+	background:#677077;
+	}
+.Button4 a,
+.Button4 input[type="submit"],
+.Button4 button{
+	background:#ffffff;
+	border-radius:3px;
+	display:inline-block;
+	width:auto;
+	padding:9px 40px;
+	line-height:26px;
+	border:none;
+	color:#2a2c43;
+	font-size:14px;
+	}
+/*======================
+Check Boxes Styles
+========================*/
+.Checkbox input[type='checkbox'] {
+    opacity: 0;
+    z-index: -1;
+	display:none;
+}
+
+.Checkbox input[type='checkbox']+label {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-indent: -999px;
+    overflow: hidden;
+    border: 1px solid #f2b632;
+    cursor: pointer;
+	background-size: 16px 16px;
+}
+
+
+/*-------------------
+  #checkbox-f style
+  ------------------*/
+
+.Checkbox input[type='checkbox']+label {
+    border: 1px solid #f2b632;
+    background: transparent;
+	transition:ease 0.4s;
+	background-position: center;
+    background-size: 16px 16px;
+}
+
+.Checkbox input[type='checkbox']:checked+label {
+    background: url(../images/tick-icon-white.png) no-repeat transparent;
+	background-size: 16px 16px;
+	background-position: center;
+}
+
+.Radio {
+	position:relative;
+	margin-right:15px;
+	vertical-align:middle;
+	padding-top:4px;
+	display:inline-block;
+	}
+.Radio input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+  box-sizing:border-box;
+}
+.Radio input[type="radio"] + label {
+  position: relative;
+  padding-left: 24px;
+  box-sizing:border-box;
+  display:inline-block;
+}
+.Radio input[type="radio"] + label:before, 
+.Radio input[type="radio"] + label:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+}
+
+.Radio input[type="radio"] + label:before {
+  width: 17px;
+  height: 17px;
+  top: 1px;
+  border: 1px solid #d2d6de;
+  border-radius: 50%;
+  box-sizing:border-box;
+}
+.Radio input[type="radio"] + label:hover:after, 
+.Radio input[type="radio"]:checked + label:after {
+  background: #d2d6de;
+  width: 5px;
+  height: 5px;
+  margin-top: 0;
+  top: 7px;
+  left: 6px;
+  border-radius: 50%;
+}
+
+.Radio input[type="radio"]:checked + label:before {
+  border-color: #f2b632;
+}
+.Radio input[type="radio"]:checked + label:after {
+  background: #f2b632;
+}
+
+/**--------------------------
+		RES TABLE
+----------------------------**/
+
+  /* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	background:#ffffff;
+}
+/* Zebra striping */
+tr{ 
+	background:#ffffff;
+}
+
+th { 
+	background: #2a2c43; 
+	color: #ffffff;
+}
+td, th { 
+	padding: 6px 15px; 
+	border: 1px solid #d0d0d2; 
+	text-align: left; 
+	box-sizing:border-box;
+	vertical-align:middle;
+}
+
+/* Hide new mobile heading on desktop */
+td span.ResTable.thead { 
+	display: none;
+}
+.TableID{
+	width:50px;
+	box-sizing:border-box;
+	text-align:center;
+	}
+table td:first-child{
+	text-align:center;
+	}
+.TableImage{
+	width:60px
+	}
+.ResTable td img{
+	max-width:100%;
+	display:block;
+	}
+.ResTable tr .action{
+	width:150px;
+	}
+.ResTable tr .action a{
+	width:32px;
+	height:32px;
+	line-height:32px;
+	display:inline-block;
+	text-align:center;
+	font-size:17px;
+	color:#ffffff;
+	margin:0px 2px;
+	border-radius:3px;
+	}
+.action a.Edit{background-color:#093;}
+.action a.View{background-color:#09F;}
+.action a.Delete{background-color:#F33;}
+
+.ResTable tr .action a:hover{
+	background-color:#2a2c43;
+	}
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table.ResTable, .ResTable thead, .ResTable tbody, .ResTable th, .ResTable tbody,
+	.ResTable td, .ResTable tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.ResTable thead, .ResTable th { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.ResTable tfoot {
+		display: block;
+		text-align: right;
+	}
+
+	.ResTable tfoot td {
+		display: inline-block;
+	}
+	
+	td span.ResTable, td span.ResTable.thead {
+		width: 50%;
+		display: inline-block;
+		vertical-align:middle;
+	}
+	td span.ResTable.tbody{
+		text-align: right;
+	}
+
+	/* 
+	Generic Styling, for Mobiles
+	*/
+
+	.ResTable tfoot tr:nth-of-type(odd), .ResTable tfoot td { 
+	  background: #333; 
+	  color: white; 
+	  font-weight: bold; 
+	  border-bottom: none;
+	}
+	
+	.ResTable tr { border: 1px solid #ccc; }
+	
+	.ResTable td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+	}
+	table td:first-child,
+	.TableID{
+		text-align:left;
+	}
+	.ResTable tr .action {
+		width: auto;
+	}
+	.ResTable td img {
+    	float:right;
+		display:block;
+	}
+}
+
+.DataSearchBar{
+	margin-bottom:20px;
+	position:relative;
+	}
+.DataSearchBar .LeftButton{
+	display:inline-block;
+	}
+.DataSearchBar .LeftButton a{
+	padding:5px 25px;
+	}
+.Search{
+	position:relative;
+	text-align:right;
+	display:inline-block;float:right;
+	}
+.Search .Input{
+	width:280px;
+	margin:0px 0px 0px auto;
+	}
+.Search .Input input{
+	width:100%;
+	border:none;
+	border-bottom:1px solid #677077;
+	color:#677077;
+	padding:5px;
+	line-height:24px;
+	}
+.Search .Submit{
+	position:absolute;
+	top:0px;
+	right:0px;
+	}
+.Search .Submit button,
+.Search .Submit a{
+	height:35px;
+	width:35px;
+	box-sizing:border-box;
+	background:transparent;
+	line-height:35px;
+	color:#677077;
+	font-size:18px;
+	border:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	}
+
+/**--------------------------------------
+			LOGIN PAGE
+----------------------------------------**/
+
+body.Login{
+	background:url(../images/login/background-img.jpeg) no-repeat;
+	background-position:top center;
+	background-size:cover;
+	position:relative;
+	}
+.Login:before,
+.Login:after{
+	content:" ";
+	clear:both;
+	display:table;
+	}
+.Login .InnerBox{
+	position:fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background:rgba(42, 44, 67, 0.92);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+body.Login .LoginBox{
+	position:relative;/*position:absolute;*/
+	width:100%;
+	max-width:360px;
+	background-color:#f2b632;
+	border-radius:5px;
+	/*top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);*/
+	padding:25px;
+	text-align:center;
+	margin:0px auto;
+	}
+.LoginBox .Logo{
+	padding:15px;
+	background:#ffffff;
+	display:inline-block;
+	border-radius:100%;
+	position:absolute;
+	max-width:80px;
+	top:-110px;
+	left:50%;
+	transform:translateX(-50%);
+	}
+.LoginBox .Logo img{
+	display:block;
+	max-width:100%;
+	}
+.LoginBox .FormWrapper2 .col{
+	padding:5px 0px;
+	}
+.LoginBox input[type="text"],
+.LoginBox input[type="email"],
+.LoginBox input[type="password"]{
+	width:100%;
+	background:transparent;
+	border:none;
+	border-radius:0px;
+	border-bottom:1px solid #ffffff;
+	padding:10px 5px;
+	line-height:24px;
+	color:#ffffff;
+	}
+.LoginBox .Button4 input[type="submit"]{
+	width:100%;
+	margin-top:15px;
+	}
+.LoginBox h2{
+	font-size:24px;
+	text-align:center;
+	margin-bottom:15px;
+	text-transform:uppercase;
+	color:#ffffff;
+	letter-spacing:0.5px;
+	}
+.LoginBox ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #ffffff;
+}
+.LoginBox ::-moz-placeholder { /* Firefox 19+ */
+	color: #ffffff;
+}
+.LoginBox :-ms-input-placeholder { /* IE 10+ */
+	color: #ffffff;
+}
+.LoginBox :-moz-placeholder { /* Firefox 18- */
+	color: #ffffff;
+}

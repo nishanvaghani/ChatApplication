@@ -1,0 +1,27 @@
+<div class="topbar">
+
+    <nav class="navbar-custom">
+
+        <ul class="list-inline float-right mb-0">
+            <li class="list-inline-item dropdown notification-list">
+                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" id="<%= data.user_id %>" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="false" aria-expanded="false">
+                    <img <% if(data.user_file != ''){ %> src="assets/images/users/<%= data.user_file %>" <% } else { %> src="assets/images/users/user.png" <% } %>  alt="user" title="<%= data.user_username %>" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5>Welcome</h5>
+                    </div>
+                    <a class="dropdown-item" href="/change_profile_view"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                    <a class="dropdown-item" href="/change_password_view"><span class="badge badge-success float-right"></span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+
+    </nav>
+
+</div>

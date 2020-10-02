@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from mannatthemes.com/annex/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:12:44 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Node Chat Applocation Dashboard</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Mannatthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <link href="assets/plugins/morris/morris.css" rel="stylesheet">
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+<!-- user data in session here -->
+<% user_session.forEach(function(data){ %>
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <% include left_header.ejs %>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <!-- Top Bar Start -->
+                    <% include top_header.ejs %>
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="page-title-box">
+                                        <h4 class="page-title">User Profile</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                    <!-- middle page data -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <form class="form-horizontal" action="http://localhost:2005/change_profile_update" method="post" id="change_profile_form" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" for="">Photo:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="file" class="form-control" id="photo" name="new_photo" accept="image/*">
+                                                        <img <% if(data.user_file != ''){ %> src="assets/images/users/<%= data.user_file %>" <% } else { %> src="assets/images/users/user.png" <% }%>  style="max-width: 200px; padding: 5px 0;">
+                                                    </div>
+                                                    <div class="error_class"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-10">
+                                                        <label class="control-label col-sm-2" for="username">Username:</label>
+                                                        <input type="text" class="form-control" id="username" value="<%= data.user_username %>" name="username">
+                                                    </div>
+                                                    <div class="error_class"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-10">
+                                                        <label class="control-label col-sm-2" for="email">Email:</label>
+                                                        <input type="text" class="form-control" id="email" value="<%= data.user_email %>" name="email">
+                                                    </div>
+                                                    <div class="error_class"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                        <input type="submit" name="Update" class="btn btn-success" value="UPDATE Detail" onclick="submit_data();">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="old_photo" value="<%= data.user_file %>">
+                                                <input type="hidden" name="user_id" value="<%= data.user_id %>">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div> <!-- end col -->
+                            </div> <!-- end row -->
+
+                            <!-- middle page data -->
+                          </div><!-- container -->
+                        </div> <!-- Page content Wrapper -->
+                    </div> <!-- content -->
+<% include script_footer.ejs %>
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('#change_profile_form').submit(function(){
+            $.ajax({
+              url: 'http://localhost:2005/change_profile_update',
+              type: 'POST',
+              data: new FormData( this ),
+              processData: false,
+              contentType: false,
+              success: function (result) {
+                }
+              });
+            });
+          });
+        </script>
+
+    </body>
+
+<!-- Mirrored from mannatthemes.com/annex/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:13:26 GMT -->
+
+<!-- user data session end here -->
+<% }); %>
+</html>

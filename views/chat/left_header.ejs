@@ -1,0 +1,41 @@
+<div class="left side-menu">
+    <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+        <i class="ion-close"></i>
+    </button>
+
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="text-center">
+            <a href="/dashboard" class="logo"><%= data.user_username %></a>
+            <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
+        </div>
+    </div>
+
+    <div class="sidebar-inner slimscrollleft">
+
+        <div id="sidebar-menu">
+            <ul>
+                <li class="menu-title">Main</li>
+                <li>
+                    <a href="/dashboard" class="waves-effect">
+                        <i class="mdi mdi-airplay"></i>
+                        <span> Dashboard <span class="badge badge-pill badge-primary float-right">7</span></span>
+                    </a>
+                </li>
+
+                <li class="menu-title" >Chat board</li>
+                <li>
+                    <a href="/chat_page" onclick="chat_option();" class="waves-effect">
+                        <i class="mdi mdi-airplay"></i>
+                        <span> Chat Option </span>
+                    </a>
+                </li>
+                <!-- <li class="menu-title" >Online</li>
+                <div id="online_user_list"></div>
+                <li class="menu-title" >Offline</li>
+                <div id="offline_user_list"></div> -->
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div> <!-- end sidebarinner -->
+</div>

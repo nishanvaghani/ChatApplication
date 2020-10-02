@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from mannatthemes.com/annex/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:19:18 GMT -->
+<head>
+    <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div class="accountbg"></div>
+<div class="wrapper-page">
+
+    <div class="card">
+        <div class="card-body">
+
+            <h3 class="text-center mt-0 m-b-15">
+                <a href="javascript:void(0);" class="logo logo-admin">Register</a>
+            </h3>
+
+            <div class="p-3">
+           
+                <h6 style="color:red;" class="error"><% if(error_msg) { %> <%= error_msg; %> <% } %></h6>
+                <!-- <h4 style="color:green;" class="error"><%= session_value; %></h4> -->
+                <form action="http://localhost:2005" class="form-horizontal m-t-20" method="POST" id="form_submit" enctype="multipart/form-data">
+                    <label class="control-label col-sm-12" for="user_photo" style="padding: 0px">Photo:</label>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" id="user_photo" name='user_photo' type="file" accept="image/*" required="">
+                        </div>
+                    </div>
+                    <label class="control-label col-sm-12" for="name" style="padding: 0px">Username:</label>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" id="name" name='username' type="text" required="" placeholder="Username">
+                        </div>
+                    </div>
+                    <label class="control-label col-sm-12" for="email" style="padding: 0px">Email:</label>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" id="email" name='email' type="email" required="" placeholder="email">
+                        </div>
+                    </div>
+                    <label class="control-label col-sm-12" for="name" style="padding: 0px">Password:</label>
+                    <span class=" mdi mdi-eye show_pass" style="cursor: pointer"> Show Password</span>
+                    <span class=" mdi mdi-eye-off hide_pass" style="cursor: pointer; display: none"> Hide Password</span>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" type="password" id="pass" name="password" required="" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input class="form-control" type="password" id="r_pass" name="r_password" required="" placeholder="R Password">
+                        </div>
+                    </div>
+                    <div class="form-group text-center row m-t-20">
+                        <div class="col-12">
+                            <input type="submit" name="register" class="btn btn-success btn-block waves-effect waves-light" value="Register">
+                            <!--<input type="submit" name="form_data_submit" onclick="submit_detail()" class="btn btn-success" value="Submit Detail">-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery  -->
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+//    $('#form_submit').submit(function () {
+//       alert('123');
+//        $.ajax({
+//            url: 'http://localhost:2005',
+//            data: new FormData( this ),
+//            type:'post',
+//            processData: false,
+//            contentType: false,
+//            success: function (result) {
+//                console.log(result);
+//            }
+//        });
+//    });
+</script>
+<script>
+    setTimeout(function(){
+        $('.error').hide();
+    },3000);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.show_pass').click(function () {
+            $('#pass').attr('type','text');
+            $('#r_pass').attr('type','text');
+            $('.hide_pass').attr('style','display:block;cursor:pointer');
+            $('.show_pass').attr('style','display:none;cursor:pointer');
+        });
+        $('.hide_pass').click(function () {
+            $('#pass').attr('type','password');
+            $('#r_pass').attr('type','password');
+            $('.show_pass').attr('style','display:block;cursor:pointer');
+            $('.hide_pass').attr('style','display:none;cursor:pointer');
+        });
+    });
+</script>
+<!-- Mirrored from mannatthemes.com/annex/vertical/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:19:19 GMT -->
+</html>
