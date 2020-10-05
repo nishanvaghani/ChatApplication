@@ -36,7 +36,6 @@ CREATE TABLE `chat` (
   `date_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 -- --------------------------------------------------------
 
 --
@@ -52,7 +51,6 @@ CREATE TABLE `register_user` (
   `user_email` varchar(255) NOT NULL,
   `user_password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 --
 -- Indexes for table `chat`

@@ -1,14 +1,11 @@
 
 var express = require('express');
 var app = express();
-
 var bodyparser = require('body-parser');
 var mysql = require('mysql');
 var file_upload = require('express-fileupload');
-
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-
 var path = require('path');
 var busboy = require('then-busboy');
 var md5 = require('md5');
@@ -18,7 +15,6 @@ var MySQLStore = require('express-mysql-session')(session);
 var ejsLint = require('ejs-lint');
 var fs = require('fs');
 var localStorage = require('localStorage');
-
 // var sharedsession = require("express-socket.io-session");
 
 app.use('/assets', express.static('assets'));
@@ -360,8 +356,6 @@ io.on('connection', function (socket) {
     });
 
   }
-
-
 
   // disconnect module start here
   socket.on('disconnect', function () {
