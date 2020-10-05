@@ -1,107 +1,106 @@
+<footer class="footer">
+  © 2018-2020 Power by Nishan Vaghani.
+</footer>
 
-                <footer class="footer">
-                    © 2018 Power by The Om Dev group.
-                </footer>
+</div>
+<!-- End Right content here -->
 
-            </div>
-            <!-- End Right content here -->
-
-        </div>
-        <!-- END wrapper -->
+</div>
+<!-- END wrapper -->
 
 
-        <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/modernizr.min.js"></script>
-        <script src="assets/js/detect.js"></script>
-        <script src="assets/js/fastclick.js"></script>
-        <script src="assets/js/jquery.slimscroll.js"></script>
-        <script src="assets/js/jquery.blockUI.js"></script>
-        <script src="assets/js/waves.js"></script>
-        <script src="assets/js/jquery.nicescroll.js"></script>
-        <script src="assets/js/jquery.scrollTo.min.js"></script>
+<!-- jQuery  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
 
-        <script src="assets/plugins/skycons/skycons.min.js"></script>
-        <script src="assets/plugins/raphael/raphael-min.js"></script>
-        <script src="assets/plugins/morris/morris.min.js"></script>
+<script src="assets/plugins/skycons/skycons.min.js"></script>
+<script src="assets/plugins/raphael/raphael-min.js"></script>
+<script src="assets/plugins/morris/morris.min.js"></script>
 
-        <script src="assets/pages/dashborad.js"></script>
+<script src="assets/pages/dashborad.js"></script>
 
-        <!-- App js -->
-        <script src="assets/js/app.js"></script>
+<!-- App js -->
+<script src="assets/js/app.js"></script>
 
-        <script>
-             /* BEGIN SVG WEATHER ICON */
-             if (typeof Skycons !== 'undefined'){
-            var icons = new Skycons(
-                {"color": "#fff"},
-                {"resizeClear": true}
-                ),
-                    list  = [
-                        "clear-day", "clear-night", "partly-cloudy-day",
-                        "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                        "fog"
-                    ],
-                    i;
+<script>
+  /* BEGIN SVG WEATHER ICON */
+  if (typeof Skycons !== 'undefined') {
+    var icons = new Skycons(
+      { "color": "#fff" },
+      { "resizeClear": true }
+    ),
+      list = [
+        "clear-day", "clear-night", "partly-cloudy-day",
+        "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+        "fog"
+      ],
+      i;
 
-                for(i = list.length; i--; )
-                icons.set(list[i], list[i]);
-                icons.play();
-            };
+    for (i = list.length; i--;)
+      icons.set(list[i], list[i]);
+    icons.play();
+  };
 
-        // scroll
+  // scroll
 
-        $(document).ready(function() {
+  $(document).ready(function () {
 
-        $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#cecece",boxzoom:true});
-        $("#boxscroll2").niceScroll({cursorborder:"",cursorcolor:"#cecece",boxzoom:true});
+    $("#boxscroll").niceScroll({ cursorborder: "", cursorcolor: "#cecece", boxzoom: true });
+    $("#boxscroll2").niceScroll({ cursorborder: "", cursorcolor: "#cecece", boxzoom: true });
 
-        });
-        </script>
+  });
+</script>
 
 <!-- Mirrored from mannatthemes.com/annex/vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jun 2018 11:13:26 GMT -->
 <!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> -->
 <script src="/socket.io/socket.io.js"></script>
 
 <script type="text/javascript">
-// mouse right click disable
-  $(function() {
-      // $(this).bind("contextmenu", function(e) {
-      //     e.preventDefault();
-      // });
+  // mouse right click disable
+  $(function () {
+    // $(this).bind("contextmenu", function(e) {
+    //     e.preventDefault();
+    // });
   });
-    $(document).keydown(function (event) {
-// disable F12, shift+ctrl+i
-        if (event.keyCode == 123) {
-            return false;
-        }
-        else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-            return false;
-        }
-// disable ctrl+u, ctrl+c, ctrl+v
-        if (event.ctrlKey && (event.keyCode === 67 || event.keyCode === 86 || event.keyCode === 85 || event.keyCode === 117 || event.keyCode === 83)) {
-            // alert('not allowed');
-            return false;
-        } else {
-            return true;
-        }
-    });
+  $(document).keydown(function (event) {
+    // disable F12, shift+ctrl+i
+    if (event.keyCode == 123) {
+      return false;
+    }
+    else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+      return false;
+    }
+    // disable ctrl+u, ctrl+c, ctrl+v
+    if (event.ctrlKey && (event.keyCode === 67 || event.keyCode === 86 || event.keyCode === 85 || event.keyCode === 117 || event.keyCode === 83)) {
+      // alert('not allowed');
+      return false;
+    } else {
+      return true;
+    }
+  });
 </script>
 <script type="text/javascript">
-    $('#chat_txt').keyup(function (event) {
+  $('#chat_txt').keyup(function (event) {
     if (event.keyCode == 13 && event.shiftKey) {
-       var content = $('#chat_txt').val();
-         var caret = getCaret(this);
-         this.value = content.substring(0,caret)+"\n"+content.substring(caret,content.length-1);
-         event.stopPropagation();
-    }else if(event.keyCode == 13) {
-        btn_click();
-        $('#chat_txt').val('');
+      var content = $('#chat_txt').val();
+      var caret = getCaret(this);
+      this.value = content.substring(0, caret) + "\n" + content.substring(caret, content.length - 1);
+      event.stopPropagation();
+    } else if (event.keyCode == 13) {
+      btn_click();
+      $('#chat_txt').val('');
     }
-});
-// if you want to press enter with shift so create new text line in chat text box.
+  });
+  // if you want to press enter with shift so create new text line in chat text box.
   function getCaret(el) {
     if (el.selectionStart) {
       return el.selectionStart;
@@ -114,7 +113,7 @@
       }
 
       var re = el.createTextRange(),
-          rc = re.duplicate();
+        rc = re.duplicate();
       re.moveToBookmark(r.getBookmark());
       rc.setEndPoint('EndToStart', re);
 
@@ -124,33 +123,33 @@
   }
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
-  // alert(localStorage.getItem("page_reload"));
-  if(localStorage.getItem("page_reload")){
-    user_id_click(localStorage.getItem("page_reload"));
-    $('#top_header_click_row_hide_'+localStorage.getItem("page_reload")).hide();
-  } else {
-    $('.ChatMessages').html('');
-    console.log('without session');
-  }
-});
+  $(document).ready(function () {
+    // alert(localStorage.getItem("page_reload"));
+    if (localStorage.getItem("page_reload")) {
+      user_id_click(localStorage.getItem("page_reload"));
+      $('#top_header_click_row_hide_' + localStorage.getItem("page_reload")).hide();
+    } else {
+      $('.ChatMessages').html('');
+      console.log('without session');
+    }
+  });
 </script>
 <script type="text/javascript">
-  $(document).ready(function(){
+  $(document).ready(function () {
     chat_option();
     counter();
     read_unread();
     header_menu_msg();
     // $(".Chating").animate({ scrollTop: 3260 },"fast");
     var url = window.location.pathname;
-    if(url == '/chat_page'){
-      $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight});
+    if (url == '/chat_page') {
+      $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight });
     }
-    setInterval(function(){
+    setInterval(function () {
       // chat_option();
       // counter();
       read_unread();
-    },1000);
+    }, 1000);
   });
 </script>
 
@@ -161,25 +160,25 @@ $(document).ready(function(){
   var admin_file = "<%= data.user_file %>";
   var chat_box_val = $('#chat_txt').val();
   // console.log(admin_id);
-  var socket = io('http://localhost:2005/', {query: "admin_id="+admin_id, 'force new connection': true});
-socket.on('admin_online', function(data){
-  chat_option();
-  counter();
-  read_unread();
-});
+  var socket = io('http://localhost:2005/', { query: "admin_id=" + admin_id, 'force new connection': true });
+  socket.on('admin_online', function (data) {
+    chat_option();
+    counter();
+    read_unread();
+  });
 
-// chat listing
-function chat_option(){
-  socket.emit('online', 'on');
-  socket.on('admin_re_online', function(res){
-      res.forEach(function(index){
+  // chat listing
+  function chat_option() {
+    socket.emit('online', 'on');
+    socket.on('admin_re_online', function (res) {
+      res.forEach(function (index) {
         // console.log(index);
         // alert('12');
-        if(admin_id == index.id){
+        if (admin_id == index.id) {
           var user = index.user_detail;
           var online = '';
           var offline = '';
-          for(var i=0; i<user.length; i++){
+          for (var i = 0; i < user.length; i++) {
             var user_id = user[i]['user_id'];
             var user_name = user[i]['user_username'];
             var user_file = user[i]['user_file'];
@@ -187,67 +186,67 @@ function chat_option(){
             var user_email = user[i]['user_email'];
             var user_active_time = user[i]['status_active_time'];
             // console.log(user_active_time);
-            if(user_status == 1){
-              if(user_file == ''){
+            if (user_status == 1) {
+              if (user_file == '') {
                 var src = "assets/images/users/user.png";
               } else {
-                src='assets/images/users/'+user_file;
+                src = 'assets/images/users/' + user_file;
               }
-              var user_listing = "<li ><a href='javascript:void(0);' onclick='user_id_click("+user_id+");'><img src='"+src+"' style='max-width: 15%;border-radius: 20%;'><span style='padding: 0 10px'>"+user_name+"</span><span class='badge badge-pill badge-primary float-right' id='unread_msg_"+user_id+"'></span><samp class='float-right' id='read_status_"+user_id+"'></samp><small style='display: block' id='user_status_"+user_id+"'>online</small></span></img></a></li>";
+              var user_listing = "<li ><a href='javascript:void(0);' onclick='user_id_click(" + user_id + ");'><img src='" + src + "' style='max-width: 15%;border-radius: 20%;'><span style='padding: 0 10px'>" + user_name + "</span><span class='badge badge-pill badge-primary float-right' id='unread_msg_" + user_id + "'></span><samp class='float-right' id='read_status_" + user_id + "'></samp><small style='display: block' id='user_status_" + user_id + "'>online</small></span></img></a></li>";
               // console.log(user_listing);
               online += user_listing;
             } else {
-              if(user_file == ''){
+              if (user_file == '') {
                 var src = "assets/images/users/user.png";
               } else {
-                src='assets/images/users/'+user_file;
+                src = 'assets/images/users/' + user_file;
               }
               var fetch_date = user_active_time;
-            var h = new Date(fetch_date).getHours();
-            var m = new Date(fetch_date).getMinutes();
-            var day = new Date(fetch_date).getDate();
-            var month = new Date(fetch_date).getMonth()+1;
-            var year = new Date(fetch_date).getUTCFullYear();
-            var msg_date_time = day+"/"+month+"/"+year;
-            // console.log(msg_date_time);
-            // current date date
-            var day = new Date().getDate();
-            var month = new Date().getMonth()+1;
-            var year = new Date().getUTCFullYear();
-            var current_day_date_time = day+"/"+month+"/"+year;
-            var yesterday_day_date_time = day-1+"/"+month+"/"+year;
-            var old_day_date_time = day-2+"/"+month+"/"+year;
+              var h = new Date(fetch_date).getHours();
+              var m = new Date(fetch_date).getMinutes();
+              var day = new Date(fetch_date).getDate();
+              var month = new Date(fetch_date).getMonth() + 1;
+              var year = new Date(fetch_date).getUTCFullYear();
+              var msg_date_time = day + "/" + month + "/" + year;
+              // console.log(msg_date_time);
+              // current date date
+              var day = new Date().getDate();
+              var month = new Date().getMonth() + 1;
+              var year = new Date().getUTCFullYear();
+              var current_day_date_time = day + "/" + month + "/" + year;
+              var yesterday_day_date_time = day - 1 + "/" + month + "/" + year;
+              var old_day_date_time = day - 2 + "/" + month + "/" + year;
 
-            if(msg_date_time == current_day_date_time){
-              var day_detail = "Today";
-              if(h>12){
-                var h = h%12;
-                var am = 'PM';
-              } else {
-                h = h;
-                am = 'AM';
+              if (msg_date_time == current_day_date_time) {
+                var day_detail = "Today";
+                if (h > 12) {
+                  var h = h % 12;
+                  var am = 'PM';
+                } else {
+                  h = h;
+                  am = 'AM';
+                }
+                var m_time = h + ":" + m + " " + am;
+                var final_time = day_detail + " " + m_time;
               }
-              var m_time = h+":"+m+" "+am;
-              var final_time = day_detail+" "+m_time;
-            }
-            if(msg_date_time == yesterday_day_date_time){
-              var day_detail = "Yesterday";
-              if(h>12){
-                var h = h%12;
-                var am = 'PM';
-              } else {
-                h = h;
-                am = 'AM';
+              if (msg_date_time == yesterday_day_date_time) {
+                var day_detail = "Yesterday";
+                if (h > 12) {
+                  var h = h % 12;
+                  var am = 'PM';
+                } else {
+                  h = h;
+                  am = 'AM';
+                }
+                var m_time = h + ":" + m + " " + am;
+                var final_time = day_detail + " " + m_time;
               }
-              var m_time = h+":"+m+" "+am;
-              var final_time = day_detail+" "+m_time;
-            }
-            if(msg_date_time < yesterday_day_date_time){
-              var day_detail = msg_date_time;
-              var m_time = '';
-              var final_time = day_detail+" "+m_time;
-            }
-              var user_listing = "<li ><a href='javascript:void(0);' onclick='user_id_click("+user_id+");'><img src='"+src+"' style='max-width: 15%;border-radius: 20%;'><span style='padding: 0 10px'>"+user_name+"</span><span class='badge badge-pill badge-primary float-right' id='unread_msg_"+user_id+"'></span><samp class='float-right' id='read_status_"+user_id+"'></samp><small style='display: inline-block' id='user_status_"+user_id+"'>offline</small><small style='display:block' id='user_status_time"+user_id+"'>last seen: "+final_time+"</small></span></img></a></li>";
+              if (msg_date_time < yesterday_day_date_time) {
+                var day_detail = msg_date_time;
+                var m_time = '';
+                var final_time = day_detail + " " + m_time;
+              }
+              var user_listing = "<li ><a href='javascript:void(0);' onclick='user_id_click(" + user_id + ");'><img src='" + src + "' style='max-width: 15%;border-radius: 20%;'><span style='padding: 0 10px'>" + user_name + "</span><span class='badge badge-pill badge-primary float-right' id='unread_msg_" + user_id + "'></span><samp class='float-right' id='read_status_" + user_id + "'></samp><small style='display: inline-block' id='user_status_" + user_id + "'>offline</small><small style='display:block' id='user_status_time" + user_id + "'>last seen: " + final_time + "</small></span></img></a></li>";
               // console.log(user_listing);
               offline += user_listing;
             }
@@ -259,759 +258,578 @@ function chat_option(){
         }
       });
     });
-}
-socket.on('admin_offline', function(data){
-  // console.log(data);
-  chat_option();
-  counter();
-  read_unread();
-});
+  }
+  socket.on('admin_offline', function (data) {
+    // console.log(data);
+    chat_option();
+    counter();
+    read_unread();
+  });
 
-function user_id_click(click_id){
+  function user_id_click(click_id) {
 
-  localStorage.setItem("page_reload", click_id);
-  // $.session.set("page_reload", click_id);
-  // console.log(socket.handshake.session.click_id);
-  $('.UIList').html(' ');
+    localStorage.setItem("page_reload", click_id);
+    // $.session.set("page_reload", click_id);
+    // console.log(socket.handshake.session.click_id);
+    $('.UIList').html(' ');
 
-  var admin_id = "<%= data.user_id %>";
-  var admin_username = "<%= data.user_username %>";
-  var admin_file = "<%= data.user_file %>";
+    var admin_id = "<%= data.user_id %>";
+    var admin_username = "<%= data.user_username %>";
+    var admin_file = "<%= data.user_file %>";
 
-  // read unread function here
-  read_unread();
-  // msg counter
-  counter();
+    // read unread function here
+    read_unread();
+    // msg counter
+    counter();
 
-  socket.emit('click_id', click_id);
-  // socket.emit('click_id', click_id, chat_data_limit);
-  // $(".Chating").animate({ scrollTop: 3260 },"fast");
+    socket.emit('click_id', click_id);
+    // socket.emit('click_id', click_id, chat_data_limit);
+    // $(".Chating").animate({ scrollTop: 3260 },"fast");
+    var url = window.location.pathname;
+    if (url == '/chat_page') {
+      $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight });
+      $('#data_limit').attr('value', 2);
+    }
+  }
+  socket.on('click_id_res', (res) => {
+    // console.log(res);
+    res.forEach(function (lng) {
+      // console.log(lng);
+
+      // chat page HEADER
+      // console.log((lng.click_log_status).length);
+      for (var i = 0; i < (lng.click_log_status).length; i++) {
+        // user logo path
+        // console.log(lng.click_log_status[i]['user_file']);
+        if (lng.click_log_status[i]['user_id'] == localStorage.getItem("page_reload")) {
+          if (lng.click_log_status[i]['user_file'] == '') {
+            var src = "assets/images/users/user.png";
+          } else {
+            src = 'assets/images/users/' + lng.click_log_status[i]['user_file'];
+          }
+          // off no line status comment(1==online, 0=offline)
+          if (lng.click_log_status[i]['user_status'] == 1) {
+            var status = "online";
+          } else {
+            status = "offline";
+          }
+          // chat page header
+          $('.BoxTitle').html("<img src='" + src + "' style='max-width: 3%;border-radius: 20%;'><span style='padding: 0 10px'>" + lng.click_log_status[i]['user_username'] + "</span></span></img>");
+          $('.active_user_id').html("<input type='hidden' id='active_user_id' name='active_user_id' value='" + lng.click_log_status[i]['user_id'] + "'>");
+          // return false;
+        }
+      }
+      // end HEADER
+      // chat msg page data
+      // $('.UIList').html('');
+      for (var i = 0; i <= (lng.each_msg).length - 1; i++) {
+
+        // msg listing
+        if (lng.each_msg[i]['from_id'] == lng.click_log_status[0]['user_id']) {
+          if (lng.click_log_status[0]['user_file']) {
+            var src = 'assets/images/users/' + lng.click_log_status[0]['user_file'];
+          } else {
+            src = "assets/images/users/user.png";
+          }
+
+          // msg time formate
+          // console.log(lng.each_msg[i]['date_time']);
+          var fetch_date = lng.each_msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
+
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = day_detail + " " + m_time;
+          }
+          var msg_data = "<li><div class='ChatImg'><img src='" + src + "' alt='" + lng.click_log_status[0]['user_username'] + "'></div><div class='ChatContent'><h5>" + lng.click_log_status[0]['user_username'] + "</h5><div class='Box BoxInfo'>" + lng.each_msg[i]['txt_msg'] + "</div></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').append(msg_data);
+        } else {
+          // console.log(data.user_file);
+          if (admin_file) {
+            var src = 'assets/images/users/' + admin_file;
+          } else {
+            src = "assets/images/users/user.png";
+          }
+          // msg time formate
+          // console.log(lng.each_msg[i]['date_time']);
+          var fetch_date = lng.each_msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
+          // console.log(current_day_date_time);
+
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = m_time + " " + day_detail;
+          }
+          var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>" + admin_username + "</h5><div class='Box BoxInfo'>" + lng.each_msg[i]['txt_msg'] + "</div></div><div class='ChatImg'><img src='" + src + "' alt='" + admin_username + "'></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').append(msg_data);
+        }
+        // end msg listing
+      }
+    });
+  });
+
+  // scroling fetch more data
   var url = window.location.pathname;
-  if(url == '/chat_page'){
-    $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight});
-    $('#data_limit').attr('value', 2);
+  if (url == '/chat_page') {
+    $(".Chating").scrollTop($(".Chating")[0].scrollHeight);
+    $('.Chating').scroll(function () {
+      if ($('.Chating').scrollTop() == 0) {
+        console.table('scroll seccess');
+        $('#loader').show();
+        more_data_fetch();
+      }
+    });
   }
-}
-socket.on('click_id_res', (res)=>{
-  // console.log(res);
-  res.forEach(function(lng){
-    // console.log(lng);
 
-// chat page HEADER
-    // console.log((lng.click_log_status).length);
-    for(var i=0; i<(lng.click_log_status).length; i++){
-      // user logo path
-      // console.log(lng.click_log_status[i]['user_file']);
-      if(lng.click_log_status[i]['user_id'] == localStorage.getItem("page_reload")){
-        if(lng.click_log_status[i]['user_file'] == ''){
-          var src = "assets/images/users/user.png";
-        } else {
-          src='assets/images/users/'+lng.click_log_status[i]['user_file'];
-        }
-        // off no line status comment(1==online, 0=offline)
-        if(lng.click_log_status[i]['user_status'] == 1){
-          var status = "online";
-        } else {
-          status = "offline";
-        }
-        // chat page header
-        $('.BoxTitle').html("<img src='"+src+"' style='max-width: 3%;border-radius: 20%;'><span style='padding: 0 10px'>"+lng.click_log_status[i]['user_username']+"</span></span></img>");
-        $('.active_user_id').html("<input type='hidden' id='active_user_id' name='active_user_id' value='"+lng.click_log_status[i]['user_id']+"'>");
-        // return false;
-      }
+  function more_data_fetch() {
+    console.log($('#data_limit').val());
+    var data_limit = $('#data_limit').val();
+    var click_id = localStorage.getItem("page_reload");
+
+    socket.emit('scroll_more_data', click_id, data_limit);
+
+    if (data_limit != '') {
+      var value_of_limit = parseInt(data_limit) + 1;
     }
-// end HEADER
-// chat msg page data
-    // $('.UIList').html('');
-    for(var i=0; i<=(lng.each_msg).length-1; i++){
-
-// msg listing
-      if(lng.each_msg[i]['from_id'] == lng.click_log_status[0]['user_id']){
-        if(lng.click_log_status[0]['user_file']){
-          var src='assets/images/users/'+lng.click_log_status[0]['user_file'];
-        } else {
-          src = "assets/images/users/user.png";
-        }
-
-// msg time formate
-        // console.log(lng.each_msg[i]['date_time']);
-        var fetch_date = lng.each_msg[i]['date_time'];
-        var h = new Date(fetch_date).getHours();
-        var m = new Date(fetch_date).getMinutes();
-        var day = new Date(fetch_date).getDate();
-        var month = new Date(fetch_date).getMonth()+1;
-        var year = new Date(fetch_date).getUTCFullYear();
-        var msg_date_time = day+"/"+month+"/"+year;
-        // console.log(msg_date_time);
-        // current date date
-        var current_day = new Date().getDate();
-        var current_month = new Date().getMonth()+1;
-        var current_year = new Date().getUTCFullYear();
-        var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-        var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-        var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-
-        if(msg_date_time == current_day_date_time){
-          var day_detail = "Today";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = day_detail+" "+m_time;
-        } else if(msg_date_time == yesterday_day_date_time){
-          var day_detail = "Yesterday";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = day_detail+" "+m_time;
-        } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-          var day_detail = msg_date_time;
-          var m_time = '';
-          var final_time = day_detail+" "+m_time;
-        }
-        var msg_data = "<li><div class='ChatImg'><img src='"+src+"' alt='"+lng.click_log_status[0]['user_username']+"'></div><div class='ChatContent'><h5>"+lng.click_log_status[0]['user_username']+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatTime'>"+final_time+"</div></li>";
-        $('.UIList').append(msg_data);
-      } else {
-        // console.log(data.user_file);
-        if(admin_file){
-          var src='assets/images/users/'+admin_file;
-        } else {
-          src = "assets/images/users/user.png";
-        }
-// msg time formate
-        // console.log(lng.each_msg[i]['date_time']);
-        var fetch_date = lng.each_msg[i]['date_time'];
-        var h = new Date(fetch_date).getHours();
-        var m = new Date(fetch_date).getMinutes();
-        var day = new Date(fetch_date).getDate();
-        var month = new Date(fetch_date).getMonth()+1;
-        var year = new Date(fetch_date).getUTCFullYear();
-        var msg_date_time = day+"/"+month+"/"+year;
-        // console.log(msg_date_time);
-        // current date date
-        var current_day = new Date().getDate();
-        var current_month = new Date().getMonth()+1;
-        var current_year = new Date().getUTCFullYear();
-        var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-        var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-        var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-        // console.log(current_day_date_time);
-
-        if(msg_date_time == current_day_date_time){
-          var day_detail = "Today";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = m_time+" "+day_detail;
-        } else if(msg_date_time == yesterday_day_date_time){
-          var day_detail = "Yesterday";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = m_time+" "+day_detail;
-        } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-          var day_detail = msg_date_time;
-          var m_time = '';
-          var final_time = m_time+" "+day_detail;
-        }
-        var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>"+admin_username+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatImg'><img src='"+src+"' alt='"+admin_username+"'></div><div class='ChatTime'>"+final_time+"</div></li>";
-        $('.UIList').append(msg_data);
-      }
-// end msg listing
-    }
-  });
-});
-
-// scroling fetch more data
-var url = window.location.pathname;
-if(url == '/chat_page'){
-  $(".Chating").scrollTop($(".Chating")[0].scrollHeight);
-  $('.Chating').scroll(function(){
-    if ($('.Chating').scrollTop() == 0){
-      console.table('scroll seccess');
-      $('#loader').show();
-      more_data_fetch();
-    }
-  });
-}
-
-function more_data_fetch(){
-  console.log($('#data_limit').val());
-  var data_limit = $('#data_limit').val();
-  var click_id = localStorage.getItem("page_reload");
-
-  socket.emit('scroll_more_data', click_id, data_limit);
-
-  if(data_limit != ''){
-    var value_of_limit = parseInt(data_limit) + 1;
+    $('#data_limit').attr('value', value_of_limit);
+    // console.log($(".Chating").scrollTop($(".Chating")[0].scrollHeight));
   }
-  $('#data_limit').attr('value', value_of_limit);
-  // console.log($(".Chating").scrollTop($(".Chating")[0].scrollHeight));
-}
-socket.on('scroll_more_data_on', (res)=>{
-  // console.log(res);
-  $('#loader').hide("slow");
-  res.forEach(function(lng){
-    // console.log(lng);
+  socket.on('scroll_more_data_on', (res) => {
+    // console.log(res);
+    $('#loader').hide("slow");
+    res.forEach(function (lng) {
+      // console.log(lng);
 
-// chat msg page data
-    // $('.UIList').html('');
-    for(var i=0; i<=(lng.each_msg).length-1; i++){
+      // chat msg page data
+      // $('.UIList').html('');
+      for (var i = 0; i <= (lng.each_msg).length - 1; i++) {
 
-// msg listing
-      if(lng.each_msg[i]['from_id'] == lng.click_log_status[0]['user_id']){
-        if(lng.click_log_status[0]['user_file']){
-          var src='assets/images/users/'+lng.click_log_status[0]['user_file'];
+        // msg listing
+        if (lng.each_msg[i]['from_id'] == lng.click_log_status[0]['user_id']) {
+          if (lng.click_log_status[0]['user_file']) {
+            var src = 'assets/images/users/' + lng.click_log_status[0]['user_file'];
+          } else {
+            src = "assets/images/users/user.png";
+          }
+
+          // msg time formate
+          // console.log(lng.each_msg[i]['date_time']);
+          var fetch_date = lng.each_msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
+
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = day_detail + " " + m_time;
+          }
+          var msg_data = "<li><div class='ChatImg'><img src='" + src + "' alt='" + lng.click_log_status[0]['user_username'] + "'></div><div class='ChatContent'><h5>" + lng.click_log_status[0]['user_username'] + "</h5><div class='Box BoxInfo'>" + lng.each_msg[i]['txt_msg'] + "</div></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').prepend(msg_data);
         } else {
-          src = "assets/images/users/user.png";
-        }
+          // console.log(data.user_file);
+          if (admin_file) {
+            var src = 'assets/images/users/' + admin_file;
+          } else {
+            src = "assets/images/users/user.png";
+          }
+          // msg time formate
+          // console.log(lng.each_msg[i]['date_time']);
+          var fetch_date = lng.each_msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
+          // console.log(current_day_date_time);
 
-// msg time formate
-        // console.log(lng.each_msg[i]['date_time']);
-        var fetch_date = lng.each_msg[i]['date_time'];
-        var h = new Date(fetch_date).getHours();
-        var m = new Date(fetch_date).getMinutes();
-        var day = new Date(fetch_date).getDate();
-        var month = new Date(fetch_date).getMonth()+1;
-        var year = new Date(fetch_date).getUTCFullYear();
-        var msg_date_time = day+"/"+month+"/"+year;
-        // console.log(msg_date_time);
-        // current date date
-        var current_day = new Date().getDate();
-        var current_month = new Date().getMonth()+1;
-        var current_year = new Date().getUTCFullYear();
-        var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-        var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-        var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-
-        if(msg_date_time == current_day_date_time){
-          var day_detail = "Today";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = m_time + " " + day_detail;
           }
-          var m_time = h+":"+m+" "+am;
-          var final_time = day_detail+" "+m_time;
-        } else if(msg_date_time == yesterday_day_date_time){
-          var day_detail = "Yesterday";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = day_detail+" "+m_time;
-        } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-          var day_detail = msg_date_time;
-          var m_time = '';
-          var final_time = day_detail+" "+m_time;
+          var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>" + admin_username + "</h5><div class='Box BoxInfo'>" + lng.each_msg[i]['txt_msg'] + "</div></div><div class='ChatImg'><img src='" + src + "' alt='" + admin_username + "'></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').prepend(msg_data);
         }
-        var msg_data = "<li><div class='ChatImg'><img src='"+src+"' alt='"+lng.click_log_status[0]['user_username']+"'></div><div class='ChatContent'><h5>"+lng.click_log_status[0]['user_username']+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatTime'>"+final_time+"</div></li>";
-        $('.UIList').prepend(msg_data);
-      } else {
-        // console.log(data.user_file);
-        if(admin_file){
-          var src='assets/images/users/'+admin_file;
-        } else {
-          src = "assets/images/users/user.png";
-        }
-// msg time formate
-        // console.log(lng.each_msg[i]['date_time']);
-        var fetch_date = lng.each_msg[i]['date_time'];
-        var h = new Date(fetch_date).getHours();
-        var m = new Date(fetch_date).getMinutes();
-        var day = new Date(fetch_date).getDate();
-        var month = new Date(fetch_date).getMonth()+1;
-        var year = new Date(fetch_date).getUTCFullYear();
-        var msg_date_time = day+"/"+month+"/"+year;
-        // console.log(msg_date_time);
-        // current date date
-        var current_day = new Date().getDate();
-        var current_month = new Date().getMonth()+1;
-        var current_year = new Date().getUTCFullYear();
-        var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-        var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-        var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-        // console.log(current_day_date_time);
-
-        if(msg_date_time == current_day_date_time){
-          var day_detail = "Today";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = m_time+" "+day_detail;
-        } else if(msg_date_time == yesterday_day_date_time){
-          var day_detail = "Yesterday";
-          if(h>12){
-            var h = h%12;
-            var am = 'PM';
-          } else {
-            h = h;
-            am = 'AM';
-          }
-          var m_time = h+":"+m+" "+am;
-          var final_time = m_time+" "+day_detail;
-        } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-          var day_detail = msg_date_time;
-          var m_time = '';
-          var final_time = m_time+" "+day_detail;
-        }
-        var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>"+admin_username+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatImg'><img src='"+src+"' alt='"+admin_username+"'></div><div class='ChatTime'>"+final_time+"</div></li>";
-        $('.UIList').prepend(msg_data);
+        // end msg listing
       }
-// end msg listing
-    }
+    });
+
   });
 
-});
+  function btn_click() {
+    var admin_id = "<%= data.user_id %>";
+    var admin_username = "<%= data.user_username %>";
+    var admin_file = "<%= data.user_file %>";
+    var chat_box_val = $('#chat_txt').val();
 
-// back up data user_id_click function
-// function user_id_click(click_id){
-//
-//   localStorage.setItem("page_reload", click_id);
-//   // $.session.set("page_reload", click_id);
-//   // console.log(socket.handshake.session.click_id);
-//
-//   var admin_id = "<%= data.user_id %>";
-//   var admin_username = "<%= data.user_username %>";
-//   var admin_file = "<%= data.user_file %>";
-//
-//   // read unread function here
-//   read_unread();
-//   // msg counter
-//   counter();
-//
-//   socket.emit('click_id', click_id);
-//   // socket.emit('click_id', click_id, chat_data_limit);
-//   // $(".Chating").animate({ scrollTop: 3260 },"fast");
-//   var url = window.location.pathname;
-//   if(url == '/chat_page'){
-//     $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight});
-//   }
-// }
-// socket.on('click_id_res', (res)=>{
-//   // console.log(res);
-//   res.forEach(function(lng){
-//     console.log(lng);
-//
-//     // data limit
-//     // console.log(lng.limit+" vaghani");
-//     // var d_limit = 6 + lng.limit;
-//     // console.log(d_limit+" nishan");
-//     // $('.data_limit').html("<input type='hidden' id='data_limit' name='data_limit' value='"+d_limit+"'>");
-//
-// // chat page HEADER
-//     // console.log((lng.click_log_status).length);
-//     for(var i=0; i<(lng.click_log_status).length; i++){
-//       // user logo path
-//       // console.log(lng.click_log_status[i]['user_file']);
-//       if(lng.click_log_status[i]['user_id'] == localStorage.getItem("page_reload")){
-//         if(lng.click_log_status[i]['user_file'] == ''){
-//           var src = "assets/images/users/user.png";
-//         } else {
-//           src='assets/images/users/'+lng.click_log_status[i]['user_file'];
-//         }
-//         // off no line status comment(1==online, 0=offline)
-//         if(lng.click_log_status[i]['user_status'] == 1){
-//           var status = "online";
-//         } else {
-//           status = "offline";
-//         }
-//         // chat page header
-//         $('.BoxTitle').html("<img src='"+src+"' style='max-width: 3%;border-radius: 20%;'><span style='padding: 0 10px'>"+lng.click_log_status[i]['user_username']+"</span></span></img>");
-//         $('.active_user_id').html("<input type='hidden' id='active_user_id' name='active_user_id' value='"+lng.click_log_status[i]['user_id']+"'>");
-//         // return false;
-//       }
-//     }
-// // end HEADER
-// // chat msg page data
-//     // $('.UIList').html('');
-//     for(var i=0; i<=(lng.each_msg).length-1; i++){
-//
-// // msg listing
-//       if(lng.each_msg[i]['from_id'] == lng.click_log_status[0]['user_id']){
-//         if(lng.click_log_status[0]['user_file']){
-//           var src='assets/images/users/'+lng.click_log_status[0]['user_file'];
-//         } else {
-//           src = "assets/images/users/user.png";
-//         }
-//
-// // msg time formate
-//         // console.log(lng.each_msg[i]['date_time']);
-//         var fetch_date = lng.each_msg[i]['date_time'];
-//         var h = new Date(fetch_date).getHours();
-//         var m = new Date(fetch_date).getMinutes();
-//         var day = new Date(fetch_date).getDate();
-//         var month = new Date(fetch_date).getMonth()+1;
-//         var year = new Date(fetch_date).getUTCFullYear();
-//         var msg_date_time = day+"/"+month+"/"+year;
-//         // console.log(msg_date_time);
-//         // current date date
-//         var current_day = new Date().getDate();
-//         var current_month = new Date().getMonth()+1;
-//         var current_year = new Date().getUTCFullYear();
-//         var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-//         var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-//         var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-//
-//         if(msg_date_time == current_day_date_time){
-//           var day_detail = "Today";
-//           if(h>12){
-//             var h = h%12;
-//             var am = 'PM';
-//           } else {
-//             h = h;
-//             am = 'AM';
-//           }
-//           var m_time = h+":"+m+" "+am;
-//           var final_time = day_detail+" "+m_time;
-//         } else if(msg_date_time == yesterday_day_date_time){
-//           var day_detail = "Yesterday";
-//           if(h>12){
-//             var h = h%12;
-//             var am = 'PM';
-//           } else {
-//             h = h;
-//             am = 'AM';
-//           }
-//           var m_time = h+":"+m+" "+am;
-//           var final_time = day_detail+" "+m_time;
-//         } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-//           var day_detail = msg_date_time;
-//           var m_time = '';
-//           var final_time = day_detail+" "+m_time;
-//         }
-//         var msg_data = "<li><div class='ChatImg'><img src='"+src+"' alt='"+lng.click_log_status[0]['user_username']+"'></div><div class='ChatContent'><h5>"+lng.click_log_status[0]['user_username']+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatTime'>"+final_time+"</div></li>";
-//         $('.UIList').append(msg_data);
-//       } else {
-//         // console.log(data.user_file);
-//         if(admin_file){
-//           var src='assets/images/users/'+admin_file;
-//         } else {
-//           src = "assets/images/users/user.png";
-//         }
-// // msg time formate
-//         // console.log(lng.each_msg[i]['date_time']);
-//         var fetch_date = lng.each_msg[i]['date_time'];
-//         var h = new Date(fetch_date).getHours();
-//         var m = new Date(fetch_date).getMinutes();
-//         var day = new Date(fetch_date).getDate();
-//         var month = new Date(fetch_date).getMonth()+1;
-//         var year = new Date(fetch_date).getUTCFullYear();
-//         var msg_date_time = day+"/"+month+"/"+year;
-//         // console.log(msg_date_time);
-//         // current date date
-//         var current_day = new Date().getDate();
-//         var current_month = new Date().getMonth()+1;
-//         var current_year = new Date().getUTCFullYear();
-//         var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-//         var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-//         var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-//         // console.log(current_day_date_time);
-//
-//         if(msg_date_time == current_day_date_time){
-//           var day_detail = "Today";
-//           if(h>12){
-//             var h = h%12;
-//             var am = 'PM';
-//           } else {
-//             h = h;
-//             am = 'AM';
-//           }
-//           var m_time = h+":"+m+" "+am;
-//           var final_time = m_time+" "+day_detail;
-//         } else if(msg_date_time == yesterday_day_date_time){
-//           var day_detail = "Yesterday";
-//           if(h>12){
-//             var h = h%12;
-//             var am = 'PM';
-//           } else {
-//             h = h;
-//             am = 'AM';
-//           }
-//           var m_time = h+":"+m+" "+am;
-//           var final_time = m_time+" "+day_detail;
-//         } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-//           var day_detail = msg_date_time;
-//           var m_time = '';
-//           var final_time = m_time+" "+day_detail;
-//         }
-//         var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>"+admin_username+"</h5><div class='Box BoxInfo'>"+lng.each_msg[i]['txt_msg']+"</div></div><div class='ChatImg'><img src='"+src+"' alt='"+admin_username+"'></div><div class='ChatTime'>"+final_time+"</div></li>";
-//         $('.UIList').append(msg_data);
-//       }
-// // end msg listing
-//     }
-//   });
-// });
-// and back up
-
-function btn_click(){
-  var admin_id = "<%= data.user_id %>";
-  var admin_username = "<%= data.user_username %>";
-  var admin_file = "<%= data.user_file %>";
-  var chat_box_val = $('#chat_txt').val();
-
-  // console.log(chat_box_val.length);
-  if(chat_box_val.length >1){
-    if($('#active_user_id').val()){
-      var two_side_data = new Array();
-      two_side_data.push({'from':admin_id,'to':$('#active_user_id').val(),'msg_data':chat_box_val});
-      socket.emit('chat_data', two_side_data);
+    // console.log(chat_box_val.length);
+    if (chat_box_val.length > 1) {
+      if ($('#active_user_id').val()) {
+        var two_side_data = new Array();
+        two_side_data.push({ 'from': admin_id, 'to': $('#active_user_id').val(), 'msg_data': chat_box_val });
+        socket.emit('chat_data', two_side_data);
+      }
     }
   }
-}
-socket.on('chat_data_response',function(response){
-  // read unread function here
-  read_unread();
-  // msg counter
-  counter();
-  // top header
-  header_menu_msg();
+  socket.on('chat_data_response', function (response) {
+    // read unread function here
+    read_unread();
+    // msg counter
+    counter();
+    // top header
+    header_menu_msg();
 
-  $('.UIList').html('');
-  // console.log(localStorage.getItem('page_reload'));
-  // console.log(response[0].msg);
-  // console.log(response[0].user_profile);
+    $('.UIList').html('');
 
-  for(var i=0; i<= response[0].msg.length-1; i++){
-    // console.log(response[0].msg[i]['txt_msg']);
+    for (var i = 0; i <= response[0].msg.length - 1; i++) {
+      console.log(response[0].msg[i]);
+      console.log(admin_file);
+      console.log(response[0]);
 
-if((response[0].msg[i]['from_id'] == localStorage.getItem('page_reload') || response[0].msg[i]['to_id'] == localStorage.getItem('page_reload')) && (response[0].msg[i]['to_id'] == admin_id || response[0].msg[i]['from_id'] == admin_id)){
+      if ((response[0].msg[i]['from_id'] == localStorage.getItem('page_reload') || response[0].msg[i]['to_id'] == localStorage.getItem('page_reload')) && (response[0].msg[i]['to_id'] == admin_id || response[0].msg[i]['from_id'] == admin_id)) {
 
-    if(response[0].msg[i]['from_id'] == admin_id){
-      if(admin_file){
-        var src='assets/images/users/'+admin_file;
-      } else {
-        src = "assets/images/users/user.png";
-      }
-// msg time formate
-      // console.log(lng.each_msg[i]['date_time']);
-      var fetch_date = response[0].msg[i]['date_time'];
-      var h = new Date(fetch_date).getHours();
-      var m = new Date(fetch_date).getMinutes();
-      var day = new Date(fetch_date).getDate();
-      var month = new Date(fetch_date).getMonth()+1;
-      var year = new Date(fetch_date).getUTCFullYear();
-      var msg_date_time = day+"/"+month+"/"+year;
-      // console.log(msg_date_time);
-      // current date date
-      var current_day = new Date().getDate();
-      var current_month = new Date().getMonth()+1;
-      var current_year = new Date().getUTCFullYear();
-      var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-      var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-      var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
-      // console.log(current_day_date_time);
+        if (response[0].msg[i]['from_id'] == admin_id) {
+          if (admin_file) {
+            var src = 'assets/images/users/' + admin_file;
+          } else {
+            src = "assets/images/users/user.png";
+          }
+          // msg time formate
+          // console.log(lng.each_msg[i]['date_time']);
+          var fetch_date = response[0].msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
+          // console.log(current_day_date_time);
 
-      if(msg_date_time == current_day_date_time){
-        var day_detail = "Today";
-        if(h>12){
-          var h = h%12;
-          var am = 'PM';
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = m_time + " " + day_detail;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = m_time + " " + day_detail;
+          }
+          var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>" + admin_username + "</h5><div class='Box BoxInfo'>" + response[0].msg[i]['txt_msg'] + "</div></div><div class='ChatImg'><img src='" + src + "' alt='" + admin_username + "'></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').append(msg_data);
+
         } else {
-          h = h;
-          am = 'AM';
-        }
-        var m_time = h+":"+m+" "+am;
-        var final_time = m_time+" "+day_detail;
-      } else if(msg_date_time == yesterday_day_date_time){
-        var day_detail = "Yesterday";
-        if(h>12){
-          var h = h%12;
-          var am = 'PM';
-        } else {
-          h = h;
-          am = 'AM';
-        }
-        var m_time = h+":"+m+" "+am;
-        var final_time = m_time+" "+day_detail;
-      } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-        var day_detail = msg_date_time;
-        var m_time = '';
-        var final_time = m_time+" "+day_detail;
-      }
-      var msg_data = "<li class='Reverse'><div class='ChatContent'><h5>"+admin_username+"</h5><div class='Box BoxInfo'>"+response[0].msg[i]['txt_msg']+"</div></div><div class='ChatImg'><img src='"+src+"' alt='"+admin_username+"'></div><div class='ChatTime'>"+final_time+"</div></li>";
-      $('.UIList').append(msg_data);
+          if (response[0].user_profile[0]['user_file']) {
+            var src = 'assets/images/users/' + response[0].user_profile[0]['user_file'];
+          } else {
+            src = "assets/images/users/user.png";
+          }
+          // msg time formate
+          var fetch_date = response[0].msg[i]['date_time'];
+          var h = new Date(fetch_date).getHours();
+          var m = new Date(fetch_date).getMinutes();
+          var day = new Date(fetch_date).getDate();
+          var month = new Date(fetch_date).getMonth() + 1;
+          var year = new Date(fetch_date).getUTCFullYear();
+          var msg_date_time = day + "/" + month + "/" + year;
+          // console.log(msg_date_time);
+          // current date date
+          var current_day = new Date().getDate();
+          var current_month = new Date().getMonth() + 1;
+          var current_year = new Date().getUTCFullYear();
+          var current_day_date_time = current_day + "/" + current_month + "/" + current_year;
+          var yesterday_day_date_time = current_day - 1 + "/" + current_month + "/" + current_year;
+          var old_day_date_time = current_day - 2 + "/" + current_month + "/" + current_year;
 
-    } else {
-      if(response[0].user_profile[0]['user_file']){
-        var src='assets/images/users/'+response[0].user_profile[0]['user_file'];
-      } else {
-        src = "assets/images/users/user.png";
-      }
-// msg time formate
-      var fetch_date = response[0].msg[i]['date_time'];
-      var h = new Date(fetch_date).getHours();
-      var m = new Date(fetch_date).getMinutes();
-      var day = new Date(fetch_date).getDate();
-      var month = new Date(fetch_date).getMonth()+1;
-      var year = new Date(fetch_date).getUTCFullYear();
-      var msg_date_time = day+"/"+month+"/"+year;
-      // console.log(msg_date_time);
-      // current date date
-      var current_day = new Date().getDate();
-      var current_month = new Date().getMonth()+1;
-      var current_year = new Date().getUTCFullYear();
-      var current_day_date_time = current_day+"/"+current_month+"/"+current_year;
-      var yesterday_day_date_time = current_day-1+"/"+current_month+"/"+current_year;
-      var old_day_date_time = current_day-2+"/"+current_month+"/"+current_year;
+          if (msg_date_time == current_day_date_time) {
+            var day_detail = "Today";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if (msg_date_time == yesterday_day_date_time) {
+            var day_detail = "Yesterday";
+            if (h > 12) {
+              var h = h % 12;
+              var am = 'PM';
+            } else {
+              h = h;
+              am = 'AM';
+            }
+            var m_time = h + ":" + m + " " + am;
+            var final_time = day_detail + " " + m_time;
+          } else if ((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)) {
+            var day_detail = msg_date_time;
+            var m_time = '';
+            var final_time = day_detail + " " + m_time;
+          }
+          var msg_data = "<li><div class='ChatImg'><img src='" + src + "' alt='" + response[0].user_profile[0]['user_username'] + "'></div><div class='ChatContent'><h5>" + response[0].user_profile[0]['user_username'] + "</h5><div class='Box BoxInfo'>" + response[0].msg[i]['txt_msg'] + "</div></div><div class='ChatTime'>" + final_time + "</div></li>";
+          $('.UIList').append(msg_data);
 
-      if(msg_date_time == current_day_date_time){
-        var day_detail = "Today";
-        if(h>12){
-          var h = h%12;
-          var am = 'PM';
-        } else {
-          h = h;
-          am = 'AM';
         }
-        var m_time = h+":"+m+" "+am;
-        var final_time = day_detail+" "+m_time;
-      } else if(msg_date_time == yesterday_day_date_time){
-        var day_detail = "Yesterday";
-        if(h>12){
-          var h = h%12;
-          var am = 'PM';
-        } else {
-          h = h;
-          am = 'AM';
-        }
-        var m_time = h+":"+m+" "+am;
-        var final_time = day_detail+" "+m_time;
-      } else if((current_day > day && current_month == month && current_year == year) || (current_month > month && current_year == year) || (current_year > year) || (current_year < year)){
-        var day_detail = msg_date_time;
-        var m_time = '';
-        var final_time = day_detail+" "+m_time;
       }
-      var msg_data = "<li><div class='ChatImg'><img src='"+src+"' alt='"+response[0].user_profile[0]['user_username']+"'></div><div class='ChatContent'><h5>"+response[0].user_profile[0]['user_username']+"</h5><div class='Box BoxInfo'>"+response[0].msg[i]['txt_msg']+"</div></div><div class='ChatTime'>"+final_time+"</div></li>";
-      $('.UIList').append(msg_data);
-
     }
-  }
-  }
-  // $(".Chating").animate({ scrollTop: 3260 },"fast");
-  $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight});
-});
+    // $(".Chating").animate({ scrollTop: 3260 },"fast");
+    $(".Chating").stop().animate({ scrollTop: $(".Chating")[0].scrollHeight });
+  });
 
-function counter(){
-  // msg counter and read unread
+  function counter() {
+    // msg counter and read unread
     var msg_status = new Array();
-    msg_status.push({'admin_id':admin_id});
+    msg_status.push({ 'admin_id': admin_id });
     socket.emit('msg_status_1', msg_status);
-    socket.on('update', function(ids, msg_length){
+    socket.on('update', function (ids, msg_length) {
       // console.log(ids+" "+msg_length);
-      if(localStorage.getItem('page_reload') != ids){
-        $('#unread_msg_'+ids).html('');
-        $('#unread_msg_'+ids).append(msg_length);
+      if (localStorage.getItem('page_reload') != ids) {
+        $('#unread_msg_' + ids).html('');
+        $('#unread_msg_' + ids).append(msg_length);
       } else {
         var click_id_msg_status = new Array();
-        click_id_msg_status.push({'admin_id':admin_id, "click_id":localStorage.getItem('page_reload')});
+        click_id_msg_status.push({ 'admin_id': admin_id, "click_id": localStorage.getItem('page_reload') });
         socket.emit('click_id_msg_status', click_id_msg_status);
-        socket.on('click_id_msg_status_update', function(ids, msg_length){
-          $('#unread_msg_'+ids).html('');
-          $('#unread_msg_'+ids).append(msg_length);
+        socket.on('click_id_msg_status_update', function (ids, msg_length) {
+          $('#unread_msg_' + ids).html('');
+          $('#unread_msg_' + ids).append(msg_length);
         });
       }
     });
-}
-
-function read_unread(){
-  socket.emit('read_unread', admin_id);
-  socket.on('read_unread_update', function(ids, read_unread_status){
-    // console.log(ids+" "+read_unread_status);
-    if(read_unread_status == 0){
-      $('#read_status_'+ids).html('');
-      $('#read_status_'+ids).append("<img src='assets/images/read.png' alt=''>");
-    } else {
-      $('#read_status_'+ids).html('');
-      $('#read_status_'+ids).append("<img src='assets/images/unread.png' alt=''>");
-    }
-  });
-}
-
-function header_menu_msg(){
-  var total = 0;
-  var total_user = new Array();
-  var user_detail = new Array();
-  socket.emit('header_menu','data_fond');
-  socket.on('header_response', function(data, size_of_data){
-    total += size_of_data;
-    total_user.push(data);
-    user_detail.push({'detail':data, 'total_msg':size_of_data});
-    // console.log(user_detail);
-
-    var upper_counter = (total_user).length;
-    var total_msg = total;
-
-    $('#upper_counter').html('');
-    $('#total_msg').html('');
-    $('#upper_counter').append(upper_counter);
-    $('#total_msg').append(total_msg);
-
-    var ap_data = '';
-    for(var i=0; i<user_detail.length; i++){
-      if(user_detail[i]['detail']['user_id'] == localStorage.getItem('page_reload')){
-        $('#upper_counter').html('');
-        $('#total_msg').html('');
-      } else {
-        if(user_detail[i]['detail']['user_file'] == ''){
-          var src = "assets/images/users/user.png";
-        } else {
-          src='assets/images/users/'+user_detail[i]['detail']['user_file'];
-        }
-        var detail_of_user = "<a href='' id='top_header_click_row_hide_"+user_detail[i]['detail']['user_id']+"' class='dropdown-item notify-item' onclick='user_id_click("+user_detail[i]['detail']['user_id']+");'> <div class='notify-icon'><img src='"+src+"' class='img-fluid rounded-circle'/></div><p class='notify-details'><b>"+user_detail[i]['detail']['user_username']+"</b><small class='text-muted'>You have "+user_detail[i]['total_msg']+" unread messages</small></p></a>";
-        ap_data += detail_of_user;
-      }
-    }
-    if(ap_data == ''){
-      $('#comeing_msg').html('');
-    } else {
-      $('#comeing_msg').html('');
-      $('#comeing_msg').append(ap_data);
-      // new Audio('assets/noti_sound/noti.mp3').play();
-    }
-  });
-}
-
-// click event herf heandler
-$('#msg_box').click(function(){
-  var url = window.location.pathname;
-  if(url == '/chat_page'){
-    $('#comeing_msg a').attr('href','javascript:void(0);');
-  } else {
-    $('#comeing_msg a').attr('href','/chat_page');
   }
 
-});
+  function read_unread() {
+    socket.emit('read_unread', admin_id);
+    socket.on('read_unread_update', function (ids, read_unread_status) {
+      // console.log(ids+" "+read_unread_status);
+      if (read_unread_status == 0) {
+        $('#read_status_' + ids).html('');
+        $('#read_status_' + ids).append("<img src='assets/images/read.png' alt=''>");
+      } else {
+        $('#read_status_' + ids).html('');
+        $('#read_status_' + ids).append("<img src='assets/images/unread.png' alt=''>");
+      }
+    });
+  }
+
+  function header_menu_msg() {
+    var total = 0;
+    var total_user = new Array();
+    var user_detail = new Array();
+    socket.emit('header_menu', 'data_fond');
+    socket.on('header_response', function (data, size_of_data) {
+      total += size_of_data;
+      total_user.push(data);
+      user_detail.push({ 'detail': data, 'total_msg': size_of_data });
+      // console.log(user_detail);
+
+      var upper_counter = (total_user).length;
+      var total_msg = total;
+
+      $('#upper_counter').html('');
+      $('#total_msg').html('');
+      $('#upper_counter').append(upper_counter);
+      $('#total_msg').append(total_msg);
+
+      var ap_data = '';
+      for (var i = 0; i < user_detail.length; i++) {
+        if (user_detail[i]['detail']['user_id'] == localStorage.getItem('page_reload')) {
+          $('#upper_counter').html('');
+          $('#total_msg').html('');
+        } else {
+          if (user_detail[i]['detail']['user_file'] == '') {
+            var src = "assets/images/users/user.png";
+          } else {
+            src = 'assets/images/users/' + user_detail[i]['detail']['user_file'];
+          }
+          var detail_of_user = "<a href='' id='top_header_click_row_hide_" + user_detail[i]['detail']['user_id'] + "' class='dropdown-item notify-item' onclick='user_id_click(" + user_detail[i]['detail']['user_id'] + ");'> <div class='notify-icon'><img src='" + src + "' class='img-fluid rounded-circle'/></div><p class='notify-details'><b>" + user_detail[i]['detail']['user_username'] + "</b><small class='text-muted'>You have " + user_detail[i]['total_msg'] + " unread messages</small></p></a>";
+          ap_data += detail_of_user;
+        }
+      }
+      if (ap_data == '') {
+        $('#comeing_msg').html('');
+      } else {
+        $('#comeing_msg').html('');
+        $('#comeing_msg').append(ap_data);
+        // new Audio('assets/noti_sound/noti.mp3').play();
+      }
+    });
+  }
+
+  // click event herf heandler
+  $('#msg_box').click(function () {
+    var url = window.location.pathname;
+    if (url == '/chat_page') {
+      $('#comeing_msg a').attr('href', 'javascript:void(0);');
+    } else {
+      $('#comeing_msg a').attr('href', '/chat_page');
+    }
+
+  });
 
 
 </script>
